@@ -1,0 +1,56 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    max-width: 1240px;
+    margin: 0 auto;
+    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.lover-list{
+    width: 700px;
+    border: 2px solid #bababa;
+    border-radius: 4px;
+}
+
+.lover-item{
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+    padding: 10px 10px;
+    transition: 0.2s;
+}
+
+.lover-item:hover{
+    background-color: #e5e5e5;
+}
+
+.lover-item_img{
+    margin-right: 20px;
+    width: 100px;
+    height: 100px;
+    padding: 5px;
+    background-color: #999;
+}
+
+.lover-item_img img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.lover-item_name{
+    color: #696868;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.lover-item_email{
+    font-size: 18px;
+    color: #777;
+}
