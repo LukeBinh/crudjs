@@ -10,6 +10,7 @@
     padding-top: 50px;
     display: flex;
     justify-content: center;
+    position: relative;
 }
 
 .lover-list{
@@ -21,7 +22,6 @@
 .lover-item{
     display: flex;
     align-items: center;
-    /* justify-content: space-between; */
     padding: 10px 10px;
     transition: 0.2s;
 }
@@ -53,4 +53,108 @@
 .lover-item_email{
     font-size: 18px;
     color: #777;
+}
+
+.lover-item_icon {
+    margin-left: auto;
+    font-size: 25px;
+}
+
+.lover-item_icon i {
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.form{
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #fff;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 0;
+    border-radius: 10px;
+}
+
+.form-input{
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+    width: 60%;
+}
+
+.form-input label{
+    font-size: 18px;
+}
+
+.form-input input{
+    /* border: 2px solid black; */
+    padding: 10px 8px;
+    border-radius: 4px;
+    outline: none;
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.form-input input:focus{
+    border: 2px solid blue;
+}
+
+.form-message{
+    font-size: 15px;
+    color: red;
+}
+
+.form-button{
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 10px 0;
+}
+
+.btn{
+    min-width: 80px;
+    padding: 10px 0;
+    font-size: 15px;
+    border: 1px solid #999;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.btn:active{
+    background-color: #e5e5e5;
+}
+
+.btn-open{
+    position: absolute;
+    left: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 40px;
+    cursor: pointer;
+    animation: swivel ease 1s infinite;
+
+}
+
+
+.overlay{
+    position: fixed;
+    top: 0;right: 0;left: 0;bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.hide{
+    display: none;
+}
+
+@keyframes swivel{
+    from{
+        transform: rotate(180deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
 }
