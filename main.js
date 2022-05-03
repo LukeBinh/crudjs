@@ -1,6 +1,3 @@
-const $ = document.querySelector.bind(document)
-const $$ = document.querySelectorAll.bind(document)
-
 const inputsElement = $$('.form-input input');
 const openBtn = $('.btn-open');
 const submitBtn = $('.btn-submit');
@@ -16,11 +13,17 @@ let newLover = { first_name: '', last_name: '', email: '', avatar: '' };
 let loverList = JSON.parse(localStorage.getItem('lovers')) || []
 
 
-const fetchLoverList = async () => {
+// const fetchLoverList = async () => {
+//     const response = await fetch('https://reqres.in/api/users').then(req => req.json()).then(result => result.data)
+//     loverList = response;
+//     render();
+// }
+
+setTimeout(async () => {
     const response = await fetch('https://reqres.in/api/users').then(req => req.json()).then(result => result.data)
     loverList = response;
     render();
-}
+},2000)
 
 function render() {
     const html = loverList.map((item, index) => {
@@ -168,7 +171,7 @@ openBtn.onclick = () => {
 submitBtn.onclick = addOrEdit;
 
 function App() {
-    fetchLoverList();
+    // fetchLoverList();
     getValueInput();
 }
 
