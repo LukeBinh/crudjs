@@ -1,3 +1,6 @@
+const $ = document.querySelector.bind(document)
+const $$ = document.querySelectorAll.bind(document)
+
 const inputsElement = $$('.form-input input');
 const openBtn = $('.btn-open');
 const submitBtn = $('.btn-submit');
