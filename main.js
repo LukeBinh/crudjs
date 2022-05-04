@@ -40,7 +40,7 @@ function render() {
                 <p class="lover-item_email">${item.email}</p>
             </div>
             <div class="lover-item_icon">
-                <i class="fa-solid fa-marker btn-edit" onclick="edit(${item.id},${index})"></i>
+                <i class="fa-solid fa-marker btn-edit" onclick="edit(${index})"></i>
                 <i class="fa-solid fa-xmark  bnt-delete" onclick="remove(${index})"></i>
             </div>
         </div>`
@@ -102,6 +102,9 @@ function unShow() {
     form.classList.add('hide');
     overlay.classList.add('hide');
     inputsElement.forEach(input => {
+        const formMessage = input.parentElement.querySelector('.form-message');
+        formMessage.innerText = ' ';
+        input.style.border = '2px solid black'
         input.value = '';
     })
     newLover = {first_name: '', last_name: '', email: '', avatar: '' };
@@ -135,7 +138,7 @@ function remove(index) {
     }
 }
 
-function edit(id, index) {
+function edit(index) {
     isAdd = false;
     const lover = loverList[index];
     newLover.id = lover.id
